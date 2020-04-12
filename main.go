@@ -39,8 +39,8 @@ func DecryptWithPrivateKey(ciphertext []byte, priv *rsa.PrivateKey) []byte {
 	return plaintext
 }
 
-//Esta funcion firma el mensaje con la llave publica,
-// retorna la firma en byte para poder ser guardad en un
+//Esta funcion firma el mensaje con la llave privada,
+//retorna la firma en byte para poder ser guardada en un
 //archivo
 func SignatureWithPrivateKey(message []byte, priv *rsa.PrivateKey) []byte {
 	newHash := crypto.SHA512
